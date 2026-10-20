@@ -11,7 +11,7 @@ export const runAI = createServerFn({ method: "POST" })
   .handler(async ({ data }) => {
     const { createOpenAI } = await import("@ai-sdk/openai");
     const { streamText } = await import("ai");
-    const key = process.env.LOVABLE_API_KEY;
+    const key = process.env['LOVABLE_API_KEY'];
     if (!key) throw new Error("AI is not configured.");
     let runId: string | undefined;
     const openai = createOpenAI({
