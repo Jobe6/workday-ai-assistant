@@ -77,10 +77,10 @@ export function AppShell({ children }: { children: ReactNode }) {
             </Button>
             <div className="flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-sm font-semibold text-accent-foreground">
-                JD
+                SS
               </div>
               <div className="hidden text-sm leading-tight sm:block">
-                <p className="font-medium">Jane Doe</p>
+                <p className="font-medium">SIzwe Sthole</p>
                 <p className="text-xs text-muted-foreground">Product Manager</p>
               </div>
             </div>
