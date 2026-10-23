@@ -12,6 +12,8 @@ export const Route = createFileRoute("/planner")({
       { name: "description", content: "Turn tasks and goals into a prioritized daily or weekly schedule." },
       { property: "og:title", content: "AI Task Planner" },
       { property: "og:description", content: "Turn tasks and goals into a prioritized daily or weekly schedule." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: PlannerPage,

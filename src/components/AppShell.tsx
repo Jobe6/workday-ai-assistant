@@ -26,7 +26,9 @@ export function AppShell({ children }: { children: ReactNode }) {
     document.documentElement.classList.toggle("dark", dark);
     localStorage.setItem("theme", dark ? "dark" : "light");
   }, [dark]);
-  useEffect(() => setOpen(false), [path]);
+  useEffect(() => {
+    setOpen(false);
+  }, [path]);
 
   const current = NAV.find((n) => n.to === path);
 

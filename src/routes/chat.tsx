@@ -12,6 +12,8 @@ export const Route = createFileRoute("/chat")({
       { name: "description", content: "Chat with an AI assistant about your work." },
       { property: "og:title", content: "AI Chatbot" },
       { property: "og:description", content: "Chat with an AI assistant about your work." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ChatPage,
@@ -19,12 +21,15 @@ export const Route = createFileRoute("/chat")({
 
 type Msg = { role: "user" | "assistant"; content: string };
 
-function ChatPage() {
+export function ChatPage() {
   const [msgs, setMsgs] = useState<Msg[]>([]);
   const [text, setText] = useState("");
   const { run, loading } = useAI();
   const end = useRef<HTMLDivElement>(null);
-  useEffect(() => end.current?.scrollIntoView({ behavior: "smooth" }), [msgs, loading]);
+  useEffect(() => {
+    // Browser scroll helpers may return a handle; it is not React cleanup.
+    end.current?.scrollIntoView({ behavior: "smooth" });
+  }, [msgs, loading]);
 
   const send = async () => {
     if (!text.trim() || loading) return;

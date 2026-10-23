@@ -11,6 +11,8 @@ export const Route = createFileRoute("/research")({
       { name: "description", content: "Get a summary, key insights and recommendations on any topic." },
       { property: "og:title", content: "AI Research Assistant" },
       { property: "og:description", content: "Get a summary, key insights and recommendations on any topic." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ResearchPage,
