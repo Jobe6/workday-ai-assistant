@@ -12,6 +12,8 @@ export const Route = createFileRoute("/email")({
       { name: "description", content: "Generate formal, friendly or persuasive emails with AI." },
       { property: "og:title", content: "Smart Email Generator" },
       { property: "og:description", content: "Generate formal, friendly or persuasive emails with AI." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: EmailPage,

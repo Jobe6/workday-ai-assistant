@@ -11,6 +11,8 @@ export const Route = createFileRoute("/notes")({
       { name: "description", content: "Summarize meeting notes into decisions, action items and deadlines." },
       { property: "og:title", content: "Meeting Notes Summarizer" },
       { property: "og:description", content: "Summarize meeting notes into decisions, action items and deadlines." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: NotesPage,
