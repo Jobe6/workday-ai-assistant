@@ -18,7 +18,6 @@ afterEach(() => {
 describe("Chat effect cleanup", () => {
   it("does not treat a scroll handle as cleanup on replay, sending, or unmount", async () => {
     const scroll = vi.fn(() => ({ cancel: vi.fn() }));
-    vi.stubGlobal("unused", undefined);
     const original = Object.getOwnPropertyDescriptor(Element.prototype, "scrollIntoView");
     Object.defineProperty(Element.prototype, "scrollIntoView", { configurable: true, value: scroll });
     run.mockResolvedValue("Hello, colleague.");
